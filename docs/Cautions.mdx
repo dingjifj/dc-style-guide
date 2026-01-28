@@ -4,6 +4,7 @@ sidebar_position: 2
 ---
 
 import ImageLayout from '@site/src/components/ImageLayout';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # 学会排版
 
@@ -256,12 +257,12 @@ import ImageLayout from '@site/src/components/ImageLayout';
 
   
 <ImageLayout column={2} width="100%" >
-  <img src="/img/1.PNG" alt="图二：原始对照图" />
-  <img src="/img/1.PNG" alt="图三：处理后的效果图" />
+ <img src={useBaseUrl('/img/1.PNG')} alt="图二：原始对照图" />
+  <img src={useBaseUrl('/img/1.PNG')} alt="图三：处理后的效果图" />
 </ImageLayout>
 
 <ImageLayout column={1} width="100%" >
-  <img src="/img/1.PNG" alt="图二：原始对照图" />
+  <img src={useBaseUrl('/img/1.PNG')} alt="图二：原始对照图" />
 </ImageLayout>
 
 
