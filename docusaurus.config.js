@@ -63,7 +63,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: '学会排版',
+        title: '文档写作指南',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -85,7 +85,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/intro',
+                to: 'docs/DetailTwo',
               },
             ],
           },
