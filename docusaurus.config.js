@@ -58,6 +58,13 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        {
+          name: 'algolia-site-verification', 
+          content: '<meta name="algolia-site-verification"  content="A2491E0A149C1069" />' 
+        },
+      ],
+
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
         respectPrefersColorScheme: true,
@@ -84,8 +91,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: 'docs/DetailTwo',
+                label: '开始阅读',
+                to: '/',
               },
             ],
           },
