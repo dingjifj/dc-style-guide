@@ -8,8 +8,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Cautions',
-  tagline: 'Dinosaurs are cool',
+  title: 'DC Style Guide',
+  tagline: '构建专业、一致、国际化的技术内容方案',
   favicon: 'img/favicon.ico',
 
   future: {
@@ -58,12 +58,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      metadata: [
-        {
-          name: 'algolia-site-verification', 
-          content: 'A2491E0A149C1069' 
-        },
-      ],
+      algolia: {
+    appId: 'CNVW5L5XT0',     // 等邮件
+    apiKey: 'f7fad471f991913b7de124a7e3dc40c3',    // 等邮件
+    indexName: 'dc-style-guide', // 等邮件
+    contextualSearch: true,
+  },
 
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
