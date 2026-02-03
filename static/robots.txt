@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dingjifj.github.io/dc-style-guide/sitemap.xml
+Sitemap: https://dingjifj.github.io/dc-style-guide/sitemap.xml 
