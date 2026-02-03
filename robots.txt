@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# 特别允许 Algolia 爬虫（可选，但更保险）
+User-agent: AlgoliaCrawler
+Allow: /
+
+Sitemap: https://dingjifj.github.io/dc-style-guide/sitemap.xml
