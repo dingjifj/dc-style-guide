@@ -19,7 +19,19 @@ const config = {
   url: 'https://dingjifj.github.io',
   baseUrl: '/dc-style-guide/',
 
-  
+  themes: [
+    '@docusaurus/theme-mermaid',
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+        language: ["en", "zh"], // 这一行非常重要，确保支持中文搜索
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      },
+    ],
+  ],
+
   organizationName: 'dingjifj',
   projectName: 'dc-style-guide',
 
@@ -29,7 +41,6 @@ const config = {
   markdown: {
     mermaid: true,
   },
-  themes: ['@docusaurus/theme-mermaid'],
   // --- 关键配置结束 ---
 
   i18n: {
@@ -59,12 +70,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      algolia: {
-    appId: 'CNVW5L5XT0',     // 等邮件
-    apiKey: 'f7fad471f991913b7de124a7e3dc40c3',    // 等邮件
-    indexName: 'dc-style-guide', // 等邮件
-    contextualSearch: true,
-  },
+    
 
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
