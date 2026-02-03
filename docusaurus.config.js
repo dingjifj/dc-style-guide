@@ -19,6 +19,7 @@ const config = {
   url: 'https://dingjifj.github.io',
   baseUrl: '/dc-style-guide/',
 
+  
   organizationName: 'dingjifj',
   projectName: 'dc-style-guide',
 
