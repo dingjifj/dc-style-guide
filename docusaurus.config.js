@@ -12,9 +12,6 @@ const config = {
   tagline: '构建专业、一致、国际化的技术内容方案',
   favicon: 'img/favicon.ico',
 
-  future: {
-    v4: true,
-  },
 
   url: 'https://dingjifj.github.io',
   baseUrl: '/dc-style-guide/',
@@ -25,9 +22,14 @@ const config = {
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
         hashed: true,
-        language: ["en", "zh"], // 这一行非常重要，确保支持中文搜索
+        language: ["en", "zh"],
         highlightSearchTermsOnTargetPage: true,
         explicitSearchResultPath: true,
+        indexDocs: true,
+        indexBlog: false,
+        // --- 针对你的情况新增以下配置 ---
+        docsRouteBasePath: "/", // 必须与你 docs 的 routeBasePath 一致
+        indexPages: true,
       },
     ],
   ],
@@ -71,24 +73,40 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
     
-
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: '文档写作指南',
+        title: '首页',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
           href: '/',
+        
         },
         items: [
+          {
+            type: 'doc',
+            
+           docId: 'MainDocs/DetailTwo', // 👈 注意：这里必须是你 docs 文件夹下确实存在的一个文件名
+            sidebarId: 'tutorialSidebar',
+           position: 'left',
+            label: '文档',
+         },
+          {
+            type: 'doc',
+            docId: 'map/Map', // 👈 注意：这里必须是你 docs 文件夹下确实存在的一个文件名
+            position: 'left',
+            sidebarId: 'mapSidebar',
+            label: '文档地图',
+          },
           {
             href: 'https://github.com/dingjifj/dc-style-guide',
             label: 'GitHub',
             position: 'right',
           },
+          
         ],
       },
       footer: {
@@ -99,10 +117,21 @@ const config = {
             items: [
               {
                 label: '开始阅读',
-                to: '/',
+                to: 'MainDocs/DetailTwo',
+              },
+               {
+                label: '文档地图',
+                to: 'RoadMap',
+              },
+              {
+                label: '贡献指南',
+                
+                to: 'Contribute',
               },
             ],
           },
+
+
           {
             title: 'Community',
             items: [
